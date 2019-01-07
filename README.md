@@ -12,3 +12,10 @@ sudo yum -y install ansible
 sudo yum -y openssl-devel "Development Tools"
 sudo pip install ansible
 ```
+
+## To install ansible on Ubuntu << APT >>
+```
+sudo apt-add-repository ppa:ansible/ansible
+sudo apt-get update
+sudo apt-get install ansible
+```
