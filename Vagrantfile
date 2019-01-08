@@ -75,4 +75,10 @@ Vagrant.configure("2") do |config|
   ┆ server.vm.hostname = "server"                                                                                                                                                                           
   ┆ server.vm.network "private_network", ip: "192.168.33.20"                                                                                                                                                
   end                                                                                                                                                                                                       
-end          
+  config.vm.define "webserver" do | webserver |                                                                                                                                                             
+  ┆ webserver.vm.hostname = "webserver"                                                                                                                                                                     
+  ┆ webserver.vm.provision "ansible" do | ansible |                                                                                                                                                         
+  ┆ ┆ ansible.playbook = "myplaybook.yml"                                                                                                                                                                   
+  ┆ end                                                                                                                                                                                                     
+  end                                                                                                                                                                                                       
+end    
