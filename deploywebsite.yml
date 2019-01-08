@@ -1,0 +1,16 @@
+---
+  - name: copy
+    hosts: test-servers
+    become: true
+    become_user: root
+    gather_facts: true
+    tasks:
+      - name: "Copy index.hmlt File"
+        copy: src=/home/username/Documents/index.html dest=/var/www/html/index.html
+
+      - name: "Copy process.php File"
+        copy: src=/home/username/Documents/process.php dest=/var/www/html/process.php
+
+      - name: "Copy result.php File"
+        copy: src=/home/username/Documents/result.php dest=/var/www/html/result.php
+...
