@@ -4,7 +4,7 @@
     - role: geerlingguy.mysql
     - role: ansible-zabbix-server
       zabbix_url: zabbix.example.com
-      zabbix_version: 2.4
+      zabbix_version: 4.0
       database_type: mysql
       database_type_long: mysql
       server_dbuser: zabbix-server
