@@ -19,3 +19,7 @@ sudo apt-add-repository ppa:ansible/ansible
 sudo apt-get update
 sudo apt-get install ansible
 ```
+## Playbook without inventory
+```console
+ansible-playbook -i '12.34.56.78,' playbook.yml
+```
